@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        overflow: hidden;
+      }
+    </style>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Tomato.</h1>
+        <p>Admin Panel</p>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <ul class="links__list">
+          <li data-link="addItem" class="active">
+            <i data-lucide="circle-plus"></i>
+            <p>Add Items</p>
+          </li>
+          <li data-link="listItems" data-ion="ListItem">
+            <i data-lucide="clipboard-list"></i>
+            <p>List Items</p>
+          </li>
+        </ul>
+      </aside>
+
+      <section id="addItem">
+        <div id="upload-image" class="upload-image">
+          <h3>Upload image</h3>
+          <label for="upload">
+            <div>
+              <i data-lucide="cloud-upload"></i>
+              <p>Upload</p>
+              <input id="upload" type="file" multiple />
+              <img src="" alt="" />
+            </div>
+          </label>
+        </div>
+
+        <div class="product-name">
+          <h3>Product name</h3>
+          <input id="productName" type="text" placeholder="Type here" />
+        </div>
+
+        <div class="product-description">
+          <h3>Product description</h3>
+          <textarea id="productDescription" placeholder="Write content here">
+food provides essential nutrients for over all health and well-being</textarea
+          >
+        </div>
+
+        <div class="product-mony">
+          <div class="product-category">
+            <h3>Product category</h3>
+            <select id="productCategory" name="category" title="category">
+              <option value="1">Salad</option>
+              <option value="2">Rolls</option>
+              <option value="3">Sandwich</option>
+              <option value="4">Cake</option>
+              <option value="5">PureVeg</option>
+              <option value="6">Pasta</option>
+              <option value="7">Noodles</option>
+            </select>
+          </div>
+
+          <div class="product-price">
+            <h3>Product price</h3>
+            <input id="productPrice" type="number" placeholder="$25" />
+          </div>
+        </div>
+        <button type="button" id="add">ADD</button>
+      </section>
+
+      <article id="listItems">
+        <div class="list-title">
+          <h3>All Foods List</h3>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
