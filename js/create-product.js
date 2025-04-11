@@ -1,3 +1,5 @@
+import { addProduct } from "./create-jsonBin.js";
+
 function createProduct() {
   let productName = document.getElementById("productName");
   let productDescription = document.getElementById("productDescription");
@@ -15,16 +17,16 @@ function createProduct() {
       productCategory.options[productCategory.selectedIndex].text;
 
     let product = {
-      idProduct: num,
-      productName: productName.value,
-      uploadImage: img.getAttribute("src"),
-      productDescription: productDescription.value,
-      productPrice: +productPrice.value,
-      productCategory: selectOption
+      id: num,
+      title: productName.value,
+      img: img.getAttribute("src"),
+      description: productDescription.value,
+      price: +productPrice.value,
+      category: selectOption
     };
 
     num++;
-    console.log(product);
+    addProduct(product);
   });
 }
 
