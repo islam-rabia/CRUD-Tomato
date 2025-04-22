@@ -1,5 +1,5 @@
 async function generateData() {
-  let req = await fetch("https://api.jsonbin.io/v3/b/67f30b6d8a456b796683bfde");
+  let req = await fetch("https://api.jsonbin.io/v3/b/67fd2e3e8561e97a50ff6005");
   let res = await req.json();
   let products = res.record.products;
 
@@ -21,10 +21,14 @@ function handleData(data) {
         <td>${title}</td>
         <td>${category}</td>
         <td>${price}</td>
+        <td class="btns">
+          <button class="update">Update</button>
+          <button class="delete">Delete</button>
+        </td>
       </tr>
     `;
     })
     .join("");
 }
 
-export { generateData };
+export { generateData, handleData };
