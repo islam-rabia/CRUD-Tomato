@@ -101,6 +101,58 @@ food provides essential nutrients for over all health and well-being</textarea
       </article>
     </main>
 
+    <section id="update-section">
+      <div class="addItem">
+        <div class="close-section">
+          <i data-lucide="x"></i>
+        </div>
+        <div id="upload-image" class="upload-image">
+          <h3>Upload image</h3>
+          <label for="upload">
+            <div>
+              <i data-lucide="cloud-upload"></i>
+              <p>Upload</p>
+              <input id="upload" type="file" multiple />
+              <img src="" alt="" />
+            </div>
+          </label>
+        </div>
+
+        <div class="product-name">
+          <h3>Product name</h3>
+          <input id="name" type="text" placeholder="Type here" />
+        </div>
+
+        <div class="product-description">
+          <h3>Product description</h3>
+          <textarea id="description" placeholder="Write content here">
+food provides essential nutrients for over all health and well-being</textarea
+          >
+        </div>
+
+        <div class="product-mony">
+          <div class="product-category">
+            <h3>Product category</h3>
+            <select id="category" name="category" title="category">
+              <option value="1">Salad</option>
+              <option value="2">Rolls</option>
+              <option value="3">Sandwich</option>
+              <option value="4">Cake</option>
+              <option value="5">PureVeg</option>
+              <option value="6">Pasta</option>
+              <option value="7">Noodles</option>
+            </select>
+          </div>
+
+          <div class="product-price">
+            <h3>Product price</h3>
+            <input id="price" type="number" placeholder="$25" />
+          </div>
+        </div>
+        <button type="button" class="update">Update</button>
+      </div>
+    </section>
+
     <script type="module" src="js/main.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
