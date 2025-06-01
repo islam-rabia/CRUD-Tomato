@@ -1,3 +1,5 @@
+import { updateProduct } from "./update-product.js";
+
 function handleDataUpdate(productId, products) {
   let productName = document.getElementById("name");
   let productDescription = document.getElementById("description");
@@ -21,13 +23,14 @@ function handleDataUpdate(productId, products) {
     img.src = product.img;
   }
 
-  console.log(product);
   img.style.display = "block";
   p.style.display = "none";
   img.style.cssText = `
     width: 100%;
     height: 100%
   `;
+
+  updateProduct(productId, products);
 }
 
 export { handleDataUpdate };
