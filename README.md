@@ -2,7 +2,7 @@
 
 A simple CRUD (Create, Read, Update, Delete) web application built using **HTML, CSS, JavaScript**, and **[jsonBin.io](https://jsonbin.io)** for persistent storage.
 
-![Cover](./public/image/info.png.png)
+![Cover](./public/info.png.png)
 
 ## 🚀 Features
 
