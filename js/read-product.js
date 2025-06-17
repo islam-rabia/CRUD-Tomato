@@ -1,9 +1,9 @@
-import { handleDataUpdate } from "./handle-data-update.js";
-import { showSectionUpdate } from "./show-section-update.js";
+import { eventDeleteButton } from "./event-delete-button.js";
+import { eventUpdateButton } from "./event-update-button.js";
 
 let wishList;
 async function generateData() {
-  let req = await fetch("https://api.jsonbin.io/v3/b/67fd2e3e8561e97a50ff6005");
+  let req = await fetch("https://api.jsonbin.io/v3/b/6843fec48a456b7966aa6e5b");
   let res = await req.json();
 
   let products = res.record.products;
@@ -15,7 +15,7 @@ async function generateData() {
 let app = document.querySelector("tbody");
 function handleData(data) {
   app.innerHTML = data
-    .map((item) => {
+    .map((item, index) => {
       let { id, title, img, category, price } = item;
 
       return `
@@ -29,23 +29,15 @@ function handleData(data) {
         <td>${price}</td>
         <td class="btns">
           <button data-id="${id}" class="update">Update</button>
-          <button class="delete">Delete</button>
+          <button data-id="${id}" class="delete">Delete</button>
         </td>
       </tr>
     `;
     })
     .join("");
 
-  app.addEventListener("click", (event) => {
-    let btn = event.target.closest(".update");
-
-    if (btn) {
-      let id = btn.dataset.id;
-
-      handleDataUpdate(id, wishList);
-      showSectionUpdate();
-    }
-  });
+  eventUpdateButton(wishList);
+  eventDeleteButton();
 }
 
 export { generateData, handleData };

@@ -32,9 +32,9 @@ function updateProduct(productId, products) {
     let productIndex = products.findIndex((ele) => ele.id === +productId);
     products[productIndex] = product;
 
-    const BIN_ID = "67fd2e3e8561e97a50ff6005";
+    const BIN_ID = "6843fec48a456b7966aa6e5b";
     const API_KEY =
-      "$2a$10$79uMxe6J40e80gJnvCuwd.dju4hRjWJbnQTwMPgK1opYHjYWLLTLK";
+      "$2a$10$HPOtPgen1KsngRnZCyzwxe8rjeTsxkbkZVxeK10nA6jWvTiTT/O.W";
     const BIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
     fetch(BIN_URL, {

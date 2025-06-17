@@ -1,6 +1,10 @@
 import { updateProduct } from "./update-product.js";
 
-function handleDataUpdate(productId, products) {
+async function handleDataUpdate(productId) {
+  let req = await fetch("https://api.jsonbin.io/v3/b/6843fec48a456b7966aa6e5b");
+  let res = await req.json();
+  let products = res.record.products;
+
   let productName = document.getElementById("name");
   let productDescription = document.getElementById("description");
   let productCategory = document.getElementById("category");
